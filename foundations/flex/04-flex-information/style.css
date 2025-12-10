@@ -12,6 +12,47 @@ img {
   font-weight: 900;
 }
 
+/* Page layout: center horizontally only */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers everything horizontally */
+}
+
+/* Title centered and spaced from items by 32px */
+.title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* Items container: horizontal layout with 52px gap */
+.items {
+  display: flex;
+  flex-direction: row;
+  gap: 52px;
+  align-items: flex-start;
+  /* allow wrapping to next line if viewport is narrow */
+  flex-wrap: wrap;
+  justify-content: center; /* keeps the row centered horizontally */
+}
+
+/* Each item is 200px wide, text wraps and is centered */
+.item {
+  width: 200px;
+  text-align: center;
+}
+
+.item img {
+  display: block;
+  margin: 0 auto 8px auto;
+  width: 100px;
+  height: 100px;
+}
+
+.text {
+  word-wrap: break-word;
+}
+
 /* do not edit this footer */
 .footer {
   position: fixed;
